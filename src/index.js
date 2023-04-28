@@ -1,36 +1,28 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from "react-dom";
 import './index.css';
+let curdate = new Date();
+curdate = curdate.getHours(); 
+let greeting ="";
+let css={};
 
-const f="ishan";
-const l="gupta";
-const date =new Date().toLocaleDateString();
-const time = new Date().toLocaleTimeString();
-const img1 = "https://picsum.photos/200/300";
-const img2 = "https://picsum.photos/300/300";
-const img3 = "https://picsum.photos/250/300";
-const links= "https://www.youtube.com/watch?v=OloAP8p1k1w&list=PLwGdqUZWnOp3aROg4wypcRhZqJG3ajZWJ&index=14";
-const css = { 
-fontSize:'100px',
-margin:'20px 40px',
-color:'red'
-
+if (curdate>=1 && curdate<12)
+{
+    greeting = "good morning";
+    css.color='lightGreen';
+}else if (curdate>12 && curdate<20)
+{
+    greeting='good afternoon';
+    css.color='brown';
+}else
+{
+    greeting ='good night';
+    css.color='yellow';
 }
 
-ReactDOM.render(
-    <>
-    <h1 style={css}> {`my name is ${f} ${l}`} </h1>
-    <p style={{fontSize:'45px', textAlign:'center'}} >current date is {date} </p>
-    <h3 className ='heading'> current time is {time}</h3>
-   <div className ='stu'>
-    <img src = {img1} alt=" here"/>
-    <img src = {img2} alt=" here"/>
-    <a href = {links} target="_d">
-    <img src = {img3} alt=" here"/>
-    </a>
-     </div>
-    
-    </>
-    ,document.getElementById('root')
-   
+
+
+ReactDOM.render(<h1>hello sir <span style={css}>{greeting}</span></h1>
+,document.getElementById("root")
+
 );
