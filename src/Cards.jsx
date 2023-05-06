@@ -5,12 +5,12 @@ function Card(props){
     return(
     <div className='cards'>
         <div className='card'>
-            <img src={props.imgsrc} alt ="imdfk" className='card_img'/>
-            <div className='card_info'>
-                <span className='card_catagory'>world class game </span>
-                <h3 className='card_title'>{props.gname} </h3>
-                <a href = {props.link} target='_blank'>
-                <button> Play Now </button>
+            <img src={props.imgsrc} alt ="imdfk" className="card_image"/>
+            <div className="card_info">
+                <span className="card_catagory">world class game </span>
+                <h3 className="card_title">{props.gname} </h3>
+                <a href = {props.link} target="_blank">
+                <button> Learn More </button>
                 </a>
 
 
